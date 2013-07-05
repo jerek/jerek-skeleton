@@ -1,0 +1,27 @@
+<?php
+
+// Default development settings. DO NOT USE ON LIVE SITE.
+
+ini_set('display_errors', true);
+ini_set('display_startup_errors', true);
+
+return [
+    'application' => [
+        'configuration' => [
+            'jsDebug' => true,
+        ],
+    ],
+
+    'asset_manager' => [
+        'caching' => [
+            'default' => null
+        ],
+    ],
+
+    'zfctwig' => [
+        'environment_options' => [
+            'cache' => null
+        ],
+    ],
+];
+

@@ -1,0 +1,33 @@
+{
+    "name": "zendframework/skeleton-application",
+    "description": "Skeleton Application for ZF2",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "zf2"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:jerek/jerek-base.git"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "dev-master",
+        "doctrine/common": "dev-master",
+        "doctrine/orm": "dev-master",
+
+        "doctrine/doctrine-module": "dev-master as 0.8",
+        "doctrine/doctrine-orm-module": "dev-master",
+
+        "kriswallsmith/assetic": ">=v1.1.0-alpha1@alpha",
+
+        "jerek/jerek-base": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Application": "module/Application/src"
+        }
+    }
+}
