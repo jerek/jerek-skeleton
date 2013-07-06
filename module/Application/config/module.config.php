@@ -72,15 +72,21 @@ return [
             ],
         ],
     ],
+
     'service_manager' => [
-        'abstract_factories' => [
-            'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-            'Zend\Log\LoggerAbstractServiceFactory',
-        ],
         'aliases' => [
             'translator' => 'MvcTranslator',
         ],
     ],
+
+    'doctrine' => [
+        'driver' => [
+            'application_entities' => [
+                'paths' => [__DIR__ . '/../src/Application/Entity'],
+            ],
+        ],
+    ],
+
     'translator' => [
         'locale' => 'en_US',
         'translation_file_patterns' => [
@@ -91,17 +97,14 @@ return [
             ],
         ],
     ],
+
     'controllers' => [
         'invokables' => [
             'Application\Controller\Index' => 'Application\Controller\IndexController'
         ],
     ],
+
     'view_manager' => [
-        'display_not_found_reason' => true,
-        'display_exceptions'       => true,
-        'doctype'                  => 'HTML5',
-        'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
         'template_map' => [
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
         ],
